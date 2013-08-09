@@ -42,7 +42,7 @@ $mysql->query("
 ");
 
 $mysql->query("
-    CREATE TABLE `$reviewTable` (
+    CREATE TABLE `global_query_review` (
       `checksum` bigint(20) unsigned NOT NULL,
       `fingerprint` text NOT NULL,
       `sample` longtext NOT NULL,
@@ -57,7 +57,7 @@ $mysql->query("
 ");
 
 $mysql->query("
-    CREATE TABLE `$historyTable` (
+    CREATE TABLE `global_query_review_history` (
       `hostname_max` varchar(64) NOT NULL,
       `db_max` varchar(64) DEFAULT NULL,
       `checksum` bigint(20) unsigned NOT NULL,
