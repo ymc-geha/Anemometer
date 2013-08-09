@@ -247,8 +247,8 @@ $conf['history_defaults']['performance_schema_history'] = array(
  */
 $conf['plugins'] = array(
 
-	'visual_explain' => '/usr/bin/pt-visual-explain',
-	'query_advisor'	=> '/usr/bin/pt-query-advisor',
+    'visual_explain' => __DIR__.'/../bin/pt-visual-explain',
+    'query_advisor'	=> __DIR__.'/../pt-query-advisor',
 
 	'show_create'	=> true,
 	'show_status'	=> true,
@@ -445,6 +445,12 @@ $conf['advisor_rules'] = array(
     'STA.001' => 'Note: != is non-standard. Use the <> operator to test for inequality.',
     'SUB.001' => 'Crit: IN() and NOT IN() subqueries are poorly optimized. MySQL executes the subquery as a dependent subquery for each row in the outer query. This is a frequent cause of serious performance problems. This might change version 6.0 of MySQL, but for versions 5.1 and older, the query should be rewritten as a JOIN or a LEFT OUTER JOIN, respectively.',
 );
+
+$conf['slowlogs'] = array(
+    '/var/log/mysql/mysql-slow.log',
+);
+
+
 /**
  * end of configuration settings
  */
