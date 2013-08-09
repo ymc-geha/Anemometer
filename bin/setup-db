@@ -34,6 +34,14 @@ $mysql->query("
 ");
 
 $mysql->query("
+    CREATE DATABASE $db;
+");
+
+$mysql->query("
+    USE $db;
+");
+
+$mysql->query("
     CREATE TABLE `$reviewTable` (
       `checksum` bigint(20) unsigned NOT NULL,
       `fingerprint` text NOT NULL,
