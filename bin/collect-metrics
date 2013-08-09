@@ -14,8 +14,8 @@ $command = __DIR__.'/pt-query-digest --user='.escapeshellarg($dataSource['user']
 if ($password) {
     $command .= ' --password='.escapeshellarg($password);
 }
-$command .= ' --review '.$dsnBase.escapeshellarg($dataSource['tables']['global_query_review']);
-$command .= ' --history '.$dsnBase.escapeshellarg($dataSource['tables']['global_query_review_history']);
+$command .= ' --review '.$dsnBase.'global_query_review';
+$command .= ' --history '.$dsnBase.'global_query_review_history';
 $command .= ' --no-report --limit=0%';
 $command .= ' --filter=" \$event->{Bytes} = length(\$event->{arg}) and \$event->{hostname}=\"$HOSTNAME\""';
 $command .= ' ';
