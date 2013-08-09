@@ -17,7 +17,7 @@ if (isset($argv[1])) {
 }
 
 if (isset($argv[2])) {
-    $installPassword = $argv[2]
+    $installPassword = $argv[2];
 } else {
     $installPassword = $dataSource['password'];
 }
