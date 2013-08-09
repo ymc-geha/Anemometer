@@ -23,8 +23,6 @@ if (isset($argv[2])) {
 }
 
 $db =  $dataSource['db'];
-$reviewTable = $dataSource['tables']['global_query_review'];
-$historyTable = $dataSource['tables']['global_query_review_history'];
 $user = $dataSource['user'];
 $password = $dataSource['password'];
 
